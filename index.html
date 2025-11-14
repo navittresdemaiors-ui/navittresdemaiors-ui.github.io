@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAVIT - Núcleo de Apoio à Vida de Três de Maio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f9ff;
+    color: #333;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 900px;
+    margin: 6rem auto 0 auto;
+    padding: 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h1, h2, h3 {
+    color: #004080;
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+  footer {
+    background-color: #e0e7ff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .links a {
+    display: inline-block;
+    margin: 0.5rem;
+    color: #004080;
+    text-decoration: underline;
+  }
+  @media (max-width: 600px) {
+    header nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+    .button {
+      display: block;
+      margin: 0.5rem auto;
+      text-align: center;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div><strong>NAVIT</strong></div>
+  <nav>
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#voluntario">Voluntariado</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" style="text-align:center;">
+    <h1>NAVIT - Núcleo de Apoio à Vida de Três de Maio</h1>
+    <p>Apoio emocional gratuito e voluntário, promovendo a saúde mental e a valorização da vida.</p>
+    <a href="https://wa.me/55999093258" class="button">Falar no WhatsApp</a>
+  </section>
+
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>O NAVIT foi fundado em <strong>18 de dezembro de 2017</strong> por um grupo de voluntários de Três de Maio, sensibilizados e impactados com o alto número de suicídios na cidade.</p>
+    <p>Somos uma organização sem fins lucrativos voltada à prevenção do suicídio, ao apoio emocional e à promoção da saúde mental. Atuamos com grupos de ajuda, rodas de conversa, palestras e campanhas comunitárias como o Setembro Amarelo.</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos e Campanhas</h2>
+    <div class="card">
+      <h3>Setembro Amarelo</h3>
+      <p>Ações de conscientização, palestras e atividades externas para prevenção do suicídio.</p>
+    </div>
+    <div class="card">
+      <h3>Grupos de Apoio e Rodas de Conversa</h3>
+      <p>Espaços acolhedores para troca, escuta e apoio mútuo entre pessoas que enfrentam desafios emocionais.</p>
+    </div>
+    <div class="card">
+      <h3>Apoio a Enlutados</h3>
+      <p>Acolhimento e suporte para pessoas que perderam alguém por suicídio ou outras situações.</p>
+    </div>
+    <div class="card">
+      <h3>Retalhos de Memórias e Vozes que Ficaram</h3>
+      <p>Projetos de registro e expressão da memória afetiva.</p>
+      <p class="links">
+        <a href="https://forms.gle/9BuMMAHbAzCBSY2f8">Retalhos de Memórias</a> |
+        <a href="https://docs.google.com/forms/d/1kNubKMR7H0T3wRlEcCyeSBAY0hsgVR-8bMbM24Z4x-8/edit">Vozes que Ficaram</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="voluntario">
+    <h2>Voluntariado</h2>
+    <p>O NAVIT é movido por voluntários. Se você deseja colaborar, entre em contato pelo WhatsApp ou pelas redes sociais.</p>
+    <a href="https://wa.me/55999093258" class="button">Quero ser voluntário</a>
+  </section>
+
+  <section id="midia">
+    <h2>Mídia e Conteúdo</h2>
+    <p>Assista entrevistas e produções em nosso canal do YouTube e acompanhe novidades nas redes sociais.</p>
+    <p class="links">
+      <a href="https://www.youtube.com/@vamosconversarnavit">Canal no YouTube</a> |
+      <a href="https://www.facebook.com/navittm/">Página no Facebook</a>
+    </p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>📞 Telefone / WhatsApp: <strong>(55) 99909-3258</strong></p>
+    <p>📧 E-mail: <a href="mailto:navittresdemaiors@gmail.com">navittresdemaiors@gmail.com</a></p>
+    <p>🏠 Endereço: Rua Santa Helena, 530 – Bairro Oriental – Três de Maio/RS</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 NAVIT — Núcleo de Apoio à Vida de Três de Maio. Trabalho voluntário e gratuito.</p>
+</footer>
+
+</body>
+</html>
