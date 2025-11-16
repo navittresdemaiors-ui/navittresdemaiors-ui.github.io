@@ -5,7 +5,7 @@
   --accent: #0b61a4;
 }
 
-*{box-sizing:border-box} 
+* { box-sizing: border-box; }
 body{
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin:0;
@@ -35,7 +35,7 @@ body{
 }
 main{max-width:var(--max-width);margin:18px auto;padding:0 12px}
 
-the gallery{
+.gallery{
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(160px,1fr));
   gap: var(--gap);
