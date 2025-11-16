@@ -1,0 +1,114 @@
+:root{
+  --max-width: 1200px;
+  --gap: 12px;
+  --bg: #fafafa;
+  --accent: #0b61a4;
+}
+
+*{box-sizing:border-box} 
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  line-height:1.3;
+}
+
+.site-header{
+  text-align:center;
+  padding:28px 16px;
+  background:linear-gradient(180deg, #fff, #f3f7fb);
+  border-bottom:1px solid #e6eef8;
+}
+.site-header h1{margin:0 0 6px;font-size:1.6rem}
+.site-header p{margin:0;color:#555}
+
+.center{ text-align:center; padding:14px 0; }
+.back-btn{
+  display:inline-block;
+  padding:8px 14px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+}
+main{max-width:var(--max-width);margin:18px auto;padding:0 12px}
+
+the gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px,1fr));
+  gap: var(--gap);
+}
+
+/* Ajustes para imagens */
+.gallery-item{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.gallery-item:hover{ transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.12);}
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  padding:18px 12px;
+  color:#666;
+  font-size:0.95rem;
+  border-top:1px solid #eee;
+  margin-top:28px;
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.75);
+  z-index:1200;
+  padding:20px;
+}
+.lightbox[aria-hidden="false"]{ display:flex; }
+
+.lb-content{
+  max-width:90%;
+  max-height:80%;
+  text-align:center;
+  position:relative;
+}
+.lb-content img{
+  max-width:100%;
+  max-height:80vh;
+  border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+.lb-caption{
+  margin-top:8px;
+  color:#fff;
+  font-size:0.95rem;
+}
+
+/* Controls */
+.lb-close, .lb-prev, .lb-next{
+  position:fixed;
+  background:transparent;
+  color:#fff;
+  border:0;
+  font-size:28px;
+  cursor:pointer;
+  padding:8px 12px;
+}
+.lb-close{ right:18px; top:18px; font-size:32px; }
+.lb-prev{ left:10px; top:50%; transform:translateY(-50%); }
+.lb-next{ right:10px; top:50%; transform:translateY(-50%); }
+
+@media (min-width:900px){
+  .gallery-item{ height:200px; }
+}
