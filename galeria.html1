@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Fotos – NAVIT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #003d66;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      transition: transform .3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 20px;
+      background: #ffc107;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      background: #eaeaea;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Galeria de Fotos – NAVIT</h1>
+  <p>Registros das ações, encontros e atividades do Núcleo de Apoio à Vida</p>
+</header>
+
+<div style="text-align:center;">
+  <a href="index.html" class="back-btn">Voltar ao Início</a>
+</div>
+
+<section class="gallery">
+
+  <img src="fotos/20160809_112017.jpg">
+  <img src="fotos/20160919_200111.jpg">
+  <img src="fotos/20161011_090202.jpg">
+  <img src="fotos/20161211_140929.jpg">
+  <img src="fotos/20161211_141045.jpg">
+  <img src="fotos/20161211_141448.jpg">
+  <img src="fotos/20161211_141450.jpg">
+  <img src="fotos/20161227_090220.jpg">
+
+  <img src="fotos/atividade-trabalhadores-secretaria-saude.jpeg">
+  <img src="fotos/atividades-divulgacao-setembro.jpg">
+  <img src="fotos/atividddades-divulgacao-setembro.jpg">
+
+  <img src="fotos/banner-grupo-enlutados.jpeg">
+  <img src="fotos/banner-campanha-2024.jpeg">
+
+  <img src="fotos/coracao-2024.jpeg">
+
+  <img src="fotos/banners-metálicas-2.jpeg">
+  <img src="fotos/banners-metálicas.jpeg">
+  <img src="fotos/banners-setembro-2.jpeg">
+  <img src="fotos/banners-setembro.jpeg">
+
+  <img src="fotos/cnv.jpeg">
+  <img src="fotos/acoes-secretaria-setembro.jpeg">
+
+  <img src="fotos/roda-conversa-2024.jpeg">
+  <img src="fotos/evento-setrem-2018.jpg">
+  <img src="fotos/encontro-enlutados-2025.jpeg">
+
+  <img src="fotos/espaco-grupo-enlutados.jpeg">
+  <img src="fotos/girassois-voluntarios.jpeg">
+  <img src="fotos/girassois-rua.jpeg">
+
+  <img src="fotos/img-20231024.jpeg">
+  <img src="fotos/memoria-caminhada.jpeg">
+
+  <img src="fotos/doacao-creche.jpeg">
+
+  <img src="fotos/reuniao-conselho-2024.jpeg">
+  <img src="fotos/encontro-estadual-comites.jpeg">
+
+  <img src="fotos/placa-trevo-cidade.jpeg">
+  <img src="fotos/placa-divulgacao.jpeg">
+
+  <img src="fotos/comite-municipal.jpeg">
+
+  <img src="fotos/plantando-ipe.jpeg">
+  <img src="fotos/reuniao-grupo.jpeg">
+  <img src="fotos/sala-grupo.jpeg">
+
+  <img src="fotos/whatsapp2023.jpeg">
+
+  <img src="fotos/combinados.jpeg">
+  <img src="fotos/capacitacao-navit.jpeg">
+  <img src="fotos/essa.jpeg">
+
+  <img src="fotos/mulheres-igreja.jpeg">
+  <img src="fotos/navit-capacitacao.jpeg">
+
+</section>
+
+<footer>
+  NAVIT – Núcleo de Apoio à Vida • Três de Maio – RS
+</footer>
+
+</body>
+</html>
