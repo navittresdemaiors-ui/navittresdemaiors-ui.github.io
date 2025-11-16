@@ -1,92 +1,205 @@
-<!DOCTYPE html>
+esse que e o certo <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NAVIT - Núcleo de Apoio à Vida de Três de Maio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NAVIT — Núcleo de Apoio à Vida de Três de Maio. Apoio emocional gratuito e voluntário, prevenção do suicídio e promoção da saúde mental.">
+<meta property="og:title" content="NAVIT - Núcleo de Apoio à Vida de Três de Maio">
+<meta property="og:description" content="Apoio emocional gratuito e voluntário. Grupos de apoio, rodas de conversa e campanhas como Setembro Amarelo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://navittresdemaiors-ui.github.io/">
+<meta property="og:image" content="/favicon.svg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#004080">
+<title>NAVIT - Núcleo de Apoio à Vida de Três de Maio</title>
+<style>
+  :root{--brand:#004080;--accent:#4caf50;--bg:#f5f9ff;--card:#ffffff}
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+    color: #333;
+  }
+  .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+  .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.5rem 1rem;background:#fff;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.15);}
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--brand);
+    font-weight: bold;
+  }
+  header nav a:hover, header nav a:focus {text-decoration: underline}
+  main {
+    max-width: 900px;
+    margin: 6rem auto 0 auto;
+    padding: 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h1, h2, h3 {
+    color: var(--brand);
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .button:hover, .button:focus {
+    background-color: #45a049;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(69,160,73,0.15);
+  }
+  .card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+  footer {
+    background-color: #e0e7ff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .links a {
+    display: inline-block;
+    margin: 0.5rem;
+    color: var(--brand);
+    text-decoration: underline;
+  }
+  @media (max-width: 600px) {
+    header nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
     }
-    header {
-      background-color: #ffc107;
-      padding: 20px;
+    .button {
+      display: block;
+      margin: 0.5rem auto;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 18px;
-    }
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    h2 {
-      color: #333;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-      background: #eaeaea;
-    }
-
-    .btn-galeria {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #003d66;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    .btn-galeria:hover {
-      background: #005a99;
-    }
-
-  </style>
+  }
+  html { scroll-behavior: smooth }
+  a:focus, button:focus {outline: 3px solid #ffbf47; outline-offset: 2px}
+</style>
 </head>
-
 <body>
 
+<a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 <header>
-  <h1>NAVIT – Núcleo de Apoio à Vida</h1>
-  <p>Prevenção do Suicídio • Apoio Emocional • Valorização da Vida</p>
+  <div><strong>NAVIT</strong></div>
+  <nav aria-label="Menu principal">
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#voluntario">Voluntariado</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
-<main>
-  <h2>Bem-vindo ao NAVIT</h2>
-  <p>
-    O NAVIT é um núcleo voluntário dedicado à promoção da saúde mental,
-    prevenção do suicídio e apoio emocional na comunidade de Três de Maio.
-  </p>
+<main id="main-content" role="main">
+  <section id="inicio" style="text-align:center;">
+    <h1>NAVIT - Núcleo de Apoio à Vida de Três de Maio</h1>
+    <p>Apoio emocional gratuito e voluntário, promovendo a saúde mental e a valorização da vida.</p>
+    <a href="https://wa.me/55999093258" class="button" aria-label="Conversar pelo WhatsApp">Falar no WhatsApp</a>
+  </section>
 
-  <p>
-    Atuamos por meio de rodas de conversa, grupos de apoio, campanhas de sensibilização,
-    diálogo com escolas e ações comunitárias voltadas à valorização da vida.
-  </p>
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>O NAVIT foi fundado em <strong>18 de Novembro de 2016</strong> por um grupo de voluntários de Três de Maio, sensibilizados e impactados com o alto número de suicídios na cidade.</p>
+    <p>Somos uma organização sem fins lucrativos voltada à prevenção do suicídio, ao apoio emocional e à promoção da saúde mental. Atuamos com grupos de ajuda, rodas de conversa, palestras e atividades comunitárias para fortalecer redes de cuidado e diálogo.</p>
+  </section>
 
-  <!-- ⭐ BOTÃO PARA GALERIA DE FOTOS ⭐ -->
-  <a href="galeria.html" class="btn-galeria">Ver Galeria de Fotos</a>
+  <section id="sobre">
+    <h2>Visão, Missão e Valores</h2>
 
+    <h3>Visão</h3>
+    <p>Sonhamos com uma comunidade onde cada pessoa seja vista, escutada e cuidada. Uma comunidade em que a vida seja valorizada todos os dias e em que ninguém precise enfrentar a dor sozinho.</p>
+
+    <h3>Missão</h3>
+    <p>Existimos para acolher, apoiar e oferecer presença. Para dizer que a vida importa. Para caminhar ao lado de quem passa por momentos difíceis, fortalecendo apoio emocional, espalhando empatia e construindo espaços de diálogo, amor e esperança.</p>
+
+    <h3>Valores</h3>
+    <ul>
+      <li>Acolher com o coração.</li>
+      <li>Ouvir sem julgamentos.</li>
+      <li>Estender a mão sempre que alguém precisar.</li>
+      <li>Agir com ética, responsabilidade e sensibilidade humana.</li>
+      <li>Respeitar cada história.</li>
+      <li>Construir pontes entre pessoas, escolas, famílias e comunidade.</li>
+      <li>Inspirar esperança e cuidado coletivo.</li>
+      <li>Promover o esclarecimento por meio de informações éticas.</li>
+      <li>Promover a valorização da vida e a prevenção do suicídio.</li>
+    </ul>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos e Campanhas</h2>
+    <div class="card">
+      <h3>Setembro Amarelo</h3>
+      <p>Ações de conscientização, palestras e atividades externas para prevenção do suicídio.</p>
+    </div>
+    <div class="card">
+      <h3>Grupos de Apoio e Rodas de Conversa</h3>
+      <p>Espaços acolhedores para troca, escuta e apoio mútuo entre pessoas que enfrentam desafios emocionais.</p>
+    </div>
+    <div class="card">
+      <h3>Apoio a Enlutados</h3>
+      <p>Acolhimento e suporte para pessoas que perderam alguém por suicídio ou outras situações.</p>
+    </div>
+    <div class="card">
+      <h3>Retalhos de Memórias e Vozes que Ficaram</h3>
+      <p>Projetos de registro e expressão da memória afetiva.</p>
+      <p class="links">
+        <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/9BuMMAHbAzCBSY2f8" aria-label="Retalhos de Memórias - abre em nova aba">Retalhos de Memórias</a> |
+        <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/1kNubKMR7H0T3wRlEcCyeSBAY0hsgVR-8bMbM24Z4x-8/edit" aria-label="Vozes que Ficaram - abre em nova aba">Vozes que Ficaram</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="voluntario">
+    <h2>Voluntariado</h2>
+    <p>O NAVIT é movido por voluntários. Se você deseja colaborar, entre em contato pelo WhatsApp ou pelas redes sociais.</p>
+    <a href="https://wa.me/55999093258" class="button" aria-label="Quero ser voluntário pelo WhatsApp">Quero ser voluntário</a>
+  </section>
+
+  <section id="midia">
+    <h2>Mídia e Conteúdo</h2>
+    <p>Assista entrevistas e produções em nosso canal do YouTube e acompanhe novidades nas redes sociais.</p>
+    <p class="links">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@vamosconversarnavit" aria-label="Canal no YouTube - abre em nova aba">Canal no YouTube</a> |
+      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/navittm/" aria-label="Página no Facebook - abre em nova aba">Página no Facebook</a>
+    </p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>📞 Telefone / WhatsApp: <strong><a href="https://wa.me/55999093258">(55) 99909-3258</a></strong></p>
+    <p>📧 E-mail: <a href="mailto:navittresdemaiors@gmail.com">navittresdemaiors@gmail.com</a></p>
+    <p>🏠 Endereço: Rua Santa Helena, 530 – Bairro Oriental – Três de Maio/RS</p>
+  </section>
 </main>
 
-<footer>
-  NAVIT – Núcleo de Apoio à Vida • Três de Maio – RS
+<footer role="contentinfo">
+  <p>© 2025 NAVIT — Núcleo de Apoio à Vida de Três de Maio. Trabalho voluntário e gratuito.</p>
 </footer>
 
 </body>
