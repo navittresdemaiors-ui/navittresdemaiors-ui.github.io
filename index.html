@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NAVIT — Grupos de Apoio e Grupo de Enlutados</title>
   <style>
-    :root{--bg:#f7f8f9;--card:#ffffff;--accent:#2f855a;--muted:#6b7280;--glass:rgba(255,255,255,0.7)}
+    :root{--bg:#f7f8f9;--card:#ffffff;--accent:#2f855a;--muted:#374151;--glass:rgba(255,255,255,0.7)}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;background:linear-gradient(180deg,var(--bg),#ffffff);color:#111;margin:0;padding:32px}
     .container{max-width:980px;margin:0 auto}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#fff;padding:8px;z-index:100;text-decoration:none}
+    .skip-link:focus{top:0}
     header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
     .logo{width:68px;height:68px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px}
     h1{margin:0;font-size:24px}
@@ -18,7 +20,7 @@
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
     ul{padding-left:18px;margin:8px 0}
     .cta-row{display:flex;gap:12px;margin-top:16px}
-    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block;text-align:center}
     .btn-primary{background:var(--accent);color:#fff}
     .btn-ghost{background:transparent;border:1px solid #e6e6e6;color:var(--accent)}
     .meta{font-size:14px;color:var(--muted);margin-top:10px}
@@ -28,27 +30,31 @@
     .card .feature{display:flex;gap:12px;align-items:flex-start;margin:10px 0}
     .feature .dot{width:44px;height:44px;border-radius:8px;background:#f0fdf4;color:#14532d;display:flex;align-items:center;justify-content:center;font-weight:700}
     footer{margin-top:26px;color:var(--muted);font-size:13px}
+    :focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+    a,button{scroll-behavior:smooth}
+    a:focus-visible,button:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
   <div class="container">
     <header>
-      <div class="logo">NAV</div>
+      <div class="logo" aria-label="Logo NAVIT">NAV</div>
       <div>
         <h1>NAVIT — Grupos de Apoio e Rodas de Conversa</h1>
         <p class="lead">Espaços gratuitos, acolhedores e conduzidos por voluntários preparados para escuta e suporte emocional.</p>
       </div>
     </header>
 
-    <main class="grid">
+    <main id="main-content" class="grid">
       <!-- Grupo de Enlutados -->
-      <article class="card">
+      <article class="card" aria-labelledby="enlutados-title">
         <span class="pill">Encontros Mensais ● Gratuito</span>
-        <h2>🌷 Grupo de Apoio para Enlutados</h2>
+        <h2 id="enlutados-title">🌷 Grupo de Apoio para Enlutados</h2>
         <p class="muted">Um espaço sensível e seguro para quem enfrenta a dor da perda — recente ou antiga. Aqui, seu tempo e sentimento são respeitados.</p>
 
         <div class="feature">
-          <div class="dot">1</div>
+          <div class="dot" aria-hidden="true">1</div>
           <div>
             <strong>O que oferecemos</strong>
             <ul>
@@ -60,7 +66,7 @@
         </div>
 
         <div class="feature">
-          <div class="dot">2</div>
+          <div class="dot" aria-hidden="true">2</div>
           <div>
             <strong>Quem pode participar</strong>
             <p class="muted">Familiares, amigos ou qualquer pessoa que esteja enlutada — sem restrição de tempo desde a perda.</p>
@@ -70,19 +76,19 @@
         <p class="meta">Formato: encontro presencial • Duração aproximada: 60-90 minutos • Vagas por encontro: limitadas</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-enlutados'">Inscrever-se / Solicitar informações</button>
-          <button class="btn btn-ghost" onclick="location.href='#contato'">Contato NAVIT</button>
+          <a href="#inscricao-enlutados" class="btn btn-primary" aria-label="Inscrever-se no grupo de enlutados">Inscrever-se / Solicitar informações</a>
+          <a href="#contato" class="btn btn-ghost" aria-label="Entre em contato com NAVIT">Contato NAVIT</a>
         </div>
       </article>
 
       <!-- Grupos de Apoio e Rodas de Conversa -->
-      <article class="card">
+      <article class="card" aria-labelledby="grupos-title">
         <span class="pill">Mensais / Quinzenais • Gratuito</span>
-        <h2>🫂 Grupos de Apoio e Rodas de Conversa</h2>
+        <h2 id="grupos-title">🫂 Grupos de Apoio e Rodas de Conversa</h2>
         <p class="muted">Conversas que acolhem, fortalecem e geram ligação — pensadas para transformar o cuidado emocional em algo presente na comunidade.</p>
 
         <div class="feature">
-          <div class="dot">A</div>
+          <div class="dot" aria-hidden="true">A</div>
           <div>
             <strong>O que acontece</strong>
             <ul>
@@ -94,7 +100,7 @@
         </div>
 
         <div class="feature">
-          <div class="dot">B</div>
+          <div class="dot" aria-hidden="true">B</div>
           <div>
             <strong>Por que participar?</strong>
             <p class="muted">Porque conversar transforma — partilhar reduz o peso, a escuta qualificada abre caminhos e a conexão humana reconstrói forças.</p>
@@ -104,8 +110,8 @@
         <p class="meta">Formato: encontros de 60 a 90 minutos • Temas variados • Gratuito e aberto à comunidade</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-grupos'">Ver calendário / Inscrever-se</button>
-          <button class="btn btn-ghost" onclick="location.href='#voluntariado'">Quero ser voluntário(a)</button>
+          <a href="#inscricao-grupos" class="btn btn-primary" aria-label="Ver calendário e inscrever-se nos grupos">Ver calendário / Inscrever-se</a>
+          <a href="#voluntariado" class="btn btn-ghost" aria-label="Informações sobre voluntariado">Quero ser voluntário(a)</a>
         </div>
       </article>
 
@@ -115,7 +121,7 @@
         <p class="muted">As datas e horários são divulgados nas redes sociais do NAVIT e na nossa página de eventos. Para receber informações por mensagem, inscreva-se através do formulário abaixo ou entre em contato com a equipe.</p>
 
         <div style="margin-top:12px">
-          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;">
+          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;" aria-label="Formulário de inscrição">
             <label style="display:block;margin-bottom:8px">Nome (opcional):<br>
               <input type="text" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
             </label>
@@ -125,8 +131,8 @@
             </label>
 
             <div style="margin-top:10px">
-              <button class="btn btn-primary" type="submit">Enviar inscrição</button>
-              <button class="btn btn-ghost" type="button" onclick="location.href='#contato'">Falar com a equipe</button>
+              <button class="btn btn-primary" type="submit" aria-label="Enviar inscrição">Enviar inscrição</button>
+              <a href="#contato" class="btn btn-ghost" aria-label="Falar com a equipe">Falar com a equipe</a>
             </div>
           </form>
         </div>
