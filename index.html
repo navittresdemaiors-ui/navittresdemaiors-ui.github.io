@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NAVIT oferece grupos de apoio gratuitos e rodas de conversa para enlutados e apoio emocional. Participamos ativamente da campanha Setembro Amarelo de prevenção ao suicídio." />
   <title>NAVIT — Grupos de Apoio e Grupo de Enlutados</title>
   <style>
     :root{--bg:#f7f8f9;--card:#ffffff;--accent:#2f855a;--muted:#6b7280;--glass:rgba(255,255,255,0.7)}
@@ -32,19 +33,19 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="logo">NAV</div>
+    <header role="banner">
+      <div class="logo" aria-hidden="true">NAV</div>
       <div>
         <h1>NAVIT — Grupos de Apoio e Rodas de Conversa</h1>
         <p class="lead">Espaços gratuitos, acolhedores e conduzidos por voluntários preparados para escuta e suporte emocional.</p>
       </div>
     </header>
 
-    <main class="grid">
+    <main class="grid" role="main">
       <!-- Grupo de Enlutados -->
-      <article class="card">
+      <article class="card" aria-labelledby="grupo-enlutados">
         <span class="pill">Encontros Mensais ● Gratuito</span>
-        <h2>🌷 Grupo de Apoio para Enlutados</h2>
+        <h2 id="grupo-enlutados">🌷 Grupo de Apoio para Enlutados</h2>
         <p class="muted">Um espaço sensível e seguro para quem enfrenta a dor da perda — recente ou antiga. Aqui, seu tempo e sentimento são respeitados.</p>
 
         <div class="feature">
@@ -76,9 +77,9 @@
       </article>
 
       <!-- Grupos de Apoio e Rodas de Conversa -->
-      <article class="card">
+      <article class="card" aria-labelledby="grupos-apoio">
         <span class="pill">Mensais / Quinzenais • Gratuito</span>
-        <h2>🫂 Grupos de Apoio e Rodas de Conversa</h2>
+        <h2 id="grupos-apoio">🫂 Grupos de Apoio e Rodas de Conversa</h2>
         <p class="muted">Conversas que acolhem, fortalecem e geram ligação — pensadas para transformar o cuidado emocional em algo presente na comunidade.</p>
 
         <div class="feature">
@@ -109,19 +110,61 @@
         </div>
       </article>
 
+      <!-- Setembro Amarelo -->
+      <article class="card fullwidth" aria-labelledby="setembro-amarelo" style="background:linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);border-left:4px solid #f59e0b">
+        <span class="pill" style="background:#fbbf24;color:#78350f">Campanha Nacional • Setembro</span>
+        <h2 id="setembro-amarelo" style="color:#78350f">🎗️ Setembro Amarelo — Prevenção ao Suicídio</h2>
+        <p class="muted" style="color:#92400e">O Setembro Amarelo é uma campanha brasileira de conscientização sobre a prevenção do suicídio. O NAVIT participa ativamente dessa mobilização através de ações na comunidade.</p>
+
+        <div class="feature">
+          <div class="dot" style="background:#fef3c7;color:#78350f;border:2px solid #f59e0b">💛</div>
+          <div>
+            <strong style="color:#78350f">Nossas ações em Setembro</strong>
+            <ul style="color:#92400e">
+              <li>Rodas de conversa abertas sobre saúde mental e prevenção</li>
+              <li>Palestras em escolas, empresas e espaços comunitários</li>
+              <li>Distribuição de materiais informativos e laços amarelos</li>
+              <li>Caminhadas e eventos de conscientização</li>
+              <li>Capacitação de voluntários para escuta qualificada</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="dot" style="background:#fef3c7;color:#78350f;border:2px solid #f59e0b">📞</div>
+          <div>
+            <strong style="color:#78350f">Precisa de ajuda agora?</strong>
+            <p style="color:#92400e;margin:4px 0">
+              <strong>CVV - Centro de Valorização da Vida:</strong> Ligue 188 (24h, gratuito)<br>
+              <strong>CAPS (Centro de Atenção Psicossocial):</strong> Procure a unidade mais próxima<br>
+              <strong>UPA/Emergência:</strong> Em situações de risco imediato
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn" style="background:#f59e0b;color:#fff" onclick="location.href='#contato'">Participar das ações do Setembro Amarelo</button>
+          <button class="btn btn-ghost" style="color:#78350f;border-color:#f59e0b" onclick="location.href='#voluntariado'">Seja voluntário(a)</button>
+        </div>
+
+        <p class="meta" style="color:#92400e;margin-top:14px">
+          <strong>Lembre-se:</strong> Falar sobre suicídio não aumenta o risco — o silêncio sim. Conversar salva vidas. Se você ou alguém que conhece está passando por dificuldades, procure ajuda profissional.
+        </p>
+      </article>
+
       <!-- Full width section with practical info -->
       <section class="card fullwidth" aria-labelledby="info">
         <h2 id="info">Como participar</h2>
         <p class="muted">As datas e horários são divulgados nas redes sociais do NAVIT e na nossa página de eventos. Para receber informações por mensagem, inscreva-se através do formulário abaixo ou entre em contato com a equipe.</p>
 
         <div style="margin-top:12px">
-          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;">
-            <label style="display:block;margin-bottom:8px">Nome (opcional):<br>
-              <input type="text" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
+          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;" aria-label="Formulário de inscrição">
+            <label style="display:block;margin-bottom:8px" for="nome-input">Nome (opcional):<br>
+              <input type="text" id="nome-input" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
             </label>
 
-            <label style="display:block;margin-top:8px;margin-bottom:8px">Email ou telefone para contato:<br>
-              <input type="email" name="email" required style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
+            <label style="display:block;margin-top:8px;margin-bottom:8px" for="email-input">Email ou telefone para contato:<br>
+              <input type="email" id="email-input" name="email" required aria-required="true" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
             </label>
 
             <div style="margin-top:10px">
@@ -136,7 +179,7 @@
 
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>Para adaptar o texto, as imagens ou integrar o formulário real, substitua o formulário de exemplo pelo link do Google Forms ou sistema de inscrições que utilizar.</p>
     </footer>
   </div>
