@@ -20,7 +20,7 @@
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
     ul{padding-left:18px;margin:8px 0}
     .cta-row{display:flex;gap:12px;margin-top:16px}
-    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block;text-align:center}
     .btn-primary{background:var(--accent);color:#fff}
     .btn-ghost{background:transparent;border:1px solid #e6e6e6;color:var(--accent)}
     .meta{font-size:14px;color:var(--muted);margin-top:10px}
@@ -76,8 +76,8 @@
         <p class="meta">Formato: encontro presencial • Duração aproximada: 60-90 minutos • Vagas por encontro: limitadas</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-enlutados'" aria-label="Inscrever-se no grupo de enlutados">Inscrever-se / Solicitar informações</button>
-          <button class="btn btn-ghost" onclick="location.href='#contato'" aria-label="Entre em contato com NAVIT">Contato NAVIT</button>
+          <a href="#inscricao-enlutados" class="btn btn-primary" aria-label="Inscrever-se no grupo de enlutados">Inscrever-se / Solicitar informações</a>
+          <a href="#contato" class="btn btn-ghost" aria-label="Entre em contato com NAVIT">Contato NAVIT</a>
         </div>
       </article>
 
@@ -110,8 +110,8 @@
         <p class="meta">Formato: encontros de 60 a 90 minutos • Temas variados • Gratuito e aberto à comunidade</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-grupos'" aria-label="Ver calendário e inscrever-se nos grupos">Ver calendário / Inscrever-se</button>
-          <button class="btn btn-ghost" onclick="location.href='#voluntariado'" aria-label="Informações sobre voluntariado">Quero ser voluntário(a)</button>
+          <a href="#inscricao-grupos" class="btn btn-primary" aria-label="Ver calendário e inscrever-se nos grupos">Ver calendário / Inscrever-se</a>
+          <a href="#voluntariado" class="btn btn-ghost" aria-label="Informações sobre voluntariado">Quero ser voluntário(a)</a>
         </div>
       </article>
 
@@ -123,16 +123,16 @@
         <div style="margin-top:12px">
           <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;" aria-label="Formulário de inscrição">
             <label style="display:block;margin-bottom:8px">Nome (opcional):<br>
-              <input type="text" name="nome" aria-label="Nome opcional" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
+              <input type="text" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
             </label>
 
             <label style="display:block;margin-top:8px;margin-bottom:8px">Email ou telefone para contato:<br>
-              <input type="email" name="email" required aria-label="Email ou telefone para contato" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
+              <input type="email" name="email" required style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
             </label>
 
             <div style="margin-top:10px">
               <button class="btn btn-primary" type="submit" aria-label="Enviar inscrição">Enviar inscrição</button>
-              <button class="btn btn-ghost" type="button" onclick="location.href='#contato'" aria-label="Falar com a equipe">Falar com a equipe</button>
+              <a href="#contato" class="btn btn-ghost" aria-label="Falar com a equipe">Falar com a equipe</a>
             </div>
           </form>
         </div>
