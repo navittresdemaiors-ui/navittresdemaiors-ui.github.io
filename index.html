@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NAVIT - Núcleo de Apoio e Valorização da Vida em Três de Maio. Grupos de apoio gratuitos para enlutados, rodas de conversa e ações de prevenção ao suicídio." />
+  <meta name="keywords" content="NAVIT, apoio emocional, grupo de enlutados, prevenção ao suicídio, setembro amarelo, saúde mental, Três de Maio" />
   <title>NAVIT — Grupos de Apoio e Grupo de Enlutados</title>
   <style>
-    :root{--bg:#f7f8f9;--card:#ffffff;--accent:#2f855a;--muted:#6b7280;--glass:rgba(255,255,255,0.7)}
+    :root{--bg:#f7f8f9;--card:#ffffff;--accent:#2f855a;--muted:#6b7280;--glass:rgba(255,255,255,0.7);--yellow:#fbbf24;--yellow-dark:#92400e}
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;background:linear-gradient(180deg,var(--bg),#ffffff);color:#111;margin:0;padding:32px}
     .container{max-width:980px;margin:0 auto}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#fff;padding:8px;z-index:100;text-decoration:none}
+    .skip-link:focus{top:0;outline:3px solid #000;outline-offset:2px}
     header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
     .logo{width:68px;height:68px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px}
     h1{margin:0;font-size:24px}
@@ -18,9 +22,12 @@
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
     ul{padding-left:18px;margin:8px 0}
     .cta-row{display:flex;gap:12px;margin-top:16px}
-    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;transition:all 0.2s}
+    .btn:focus{outline:3px solid var(--accent);outline-offset:2px}
     .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:#276749}
     .btn-ghost{background:transparent;border:1px solid #e6e6e6;color:var(--accent)}
+    .btn-ghost:hover{background:#f0fdf4}
     .meta{font-size:14px;color:var(--muted);margin-top:10px}
     .muted{color:var(--muted)}
     .fullwidth{grid-column:1/-1}
@@ -28,19 +35,26 @@
     .card .feature{display:flex;gap:12px;align-items:flex-start;margin:10px 0}
     .feature .dot{width:44px;height:44px;border-radius:8px;background:#f0fdf4;color:#14532d;display:flex;align-items:center;justify-content:center;font-weight:700}
     footer{margin-top:26px;color:var(--muted);font-size:13px}
+    .setembro-amarelo{background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid var(--yellow);color:var(--yellow-dark)}
+    .setembro-amarelo h2{color:var(--yellow-dark)}
+    .projeto-card{background:#fff;border-left:4px solid var(--accent);padding:16px;margin:12px 0;border-radius:8px}
+    .projeto-card h3{margin-top:0;color:var(--accent)}
+    .image-banner{width:100%;height:auto;border-radius:8px;margin:12px 0}
+    input:focus,textarea:focus,select:focus{outline:3px solid var(--accent);outline-offset:2px}
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
   <div class="container">
     <header>
-      <div class="logo">NAV</div>
+      <div class="logo" aria-hidden="true">NAV</div>
       <div>
         <h1>NAVIT — Grupos de Apoio e Rodas de Conversa</h1>
         <p class="lead">Espaços gratuitos, acolhedores e conduzidos por voluntários preparados para escuta e suporte emocional.</p>
       </div>
     </header>
 
-    <main class="grid">
+    <main class="grid" id="main-content">
       <!-- Grupo de Enlutados -->
       <article class="card">
         <span class="pill">Encontros Mensais ● Gratuito</span>
@@ -70,8 +84,8 @@
         <p class="meta">Formato: encontro presencial • Duração aproximada: 60-90 minutos • Vagas por encontro: limitadas</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-enlutados'">Inscrever-se / Solicitar informações</button>
-          <button class="btn btn-ghost" onclick="location.href='#contato'">Contato NAVIT</button>
+          <button class="btn btn-primary" onclick="location.href='#inscricao-enlutados'" aria-label="Inscrever-se ou solicitar informações sobre o grupo de enlutados">Inscrever-se / Solicitar informações</button>
+          <button class="btn btn-ghost" onclick="location.href='#contato'" aria-label="Entrar em contato com o NAVIT">Contato NAVIT</button>
         </div>
       </article>
 
@@ -104,8 +118,8 @@
         <p class="meta">Formato: encontros de 60 a 90 minutos • Temas variados • Gratuito e aberto à comunidade</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-grupos'">Ver calendário / Inscrever-se</button>
-          <button class="btn btn-ghost" onclick="location.href='#voluntariado'">Quero ser voluntário(a)</button>
+          <button class="btn btn-primary" onclick="location.href='#inscricao-grupos'" aria-label="Ver calendário e inscrever-se nos grupos de apoio">Ver calendário / Inscrever-se</button>
+          <button class="btn btn-ghost" onclick="location.href='#voluntariado'" aria-label="Saber como se tornar voluntário">Quero ser voluntário(a)</button>
         </div>
       </article>
 
@@ -115,23 +129,74 @@
         <p class="muted">As datas e horários são divulgados nas redes sociais do NAVIT e na nossa página de eventos. Para receber informações por mensagem, inscreva-se através do formulário abaixo ou entre em contato com a equipe.</p>
 
         <div style="margin-top:12px">
-          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;">
-            <label style="display:block;margin-bottom:8px">Nome (opcional):<br>
-              <input type="text" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
+          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;" aria-label="Formulário de inscrição">
+            <label for="nome-input" style="display:block;margin-bottom:8px">Nome (opcional):<br>
+              <input type="text" id="nome-input" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px" aria-label="Nome">
             </label>
 
-            <label style="display:block;margin-top:8px;margin-bottom:8px">Email ou telefone para contato:<br>
-              <input type="email" name="email" required style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
+            <label for="email-input" style="display:block;margin-top:8px;margin-bottom:8px">Email ou telefone para contato:<br>
+              <input type="email" id="email-input" name="email" required style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px" aria-label="Email ou telefone" aria-required="true">
             </label>
 
             <div style="margin-top:10px">
-              <button class="btn btn-primary" type="submit">Enviar inscrição</button>
-              <button class="btn btn-ghost" type="button" onclick="location.href='#contato'">Falar com a equipe</button>
+              <button class="btn btn-primary" type="submit" aria-label="Enviar inscrição">Enviar inscrição</button>
+              <button class="btn btn-ghost" type="button" onclick="location.href='#contato'" aria-label="Falar com a equipe">Falar com a equipe</button>
             </div>
           </form>
         </div>
 
         <p class="muted" style="margin-top:14px">Observação: todos os encontros são gratuitos, voluntários passam por orientação para condução e o espaço preserva sigilo e respeito a cada participante.</p>
+      </section>
+
+      <!-- Projetos & Atividades -->
+      <section class="card fullwidth" aria-labelledby="projetos">
+        <h2 id="projetos">📋 Projetos &amp; Atividades</h2>
+        <p class="muted">O NAVIT desenvolve diversos projetos e atividades ao longo do ano, fortalecendo a rede de apoio e prevenção na comunidade.</p>
+
+        <div class="projeto-card">
+          <h3>🎓 Formação e Capacitação</h3>
+          <p>Encontros de capacitação para voluntários e profissionais interessados em aprofundar conhecimentos sobre escuta qualificada, Comunicação Não-Violenta (CNV) e apoio emocional.</p>
+          <img src="navit-capacitacao.jpeg" alt="Encontro de capacitação do NAVIT com voluntários reunidos" class="image-banner" loading="lazy">
+        </div>
+
+        <div class="projeto-card">
+          <h3>🤝 Parcerias Comunitárias</h3>
+          <p>Colaborações com escolas, igrejas, secretarias de saúde e outras instituições para ampliar o alcance das ações de prevenção e acolhimento.</p>
+          <img src="primeiro-encontro-comite-municipal.jpeg" alt="Primeiro encontro do Comitê Municipal de prevenção ao suicídio" class="image-banner" loading="lazy">
+        </div>
+
+        <div class="projeto-card">
+          <h3>💚 Ações de Conscientização</h3>
+          <p>Campanhas e eventos abertos à comunidade, incluindo rodas de conversa, palestras e atividades simbólicas de valorização da vida.</p>
+          <img src="girassois-voluntarios-cvv.jpeg" alt="Voluntários distribuindo girassóis em ação de conscientização" class="image-banner" loading="lazy">
+        </div>
+      </section>
+
+      <!-- Setembro Amarelo -->
+      <section class="card fullwidth setembro-amarelo" aria-labelledby="setembro-amarelo">
+        <h2 id="setembro-amarelo">💛 Setembro Amarelo: Mês de Prevenção ao Suicídio</h2>
+        <p>Todo ano, durante o mês de setembro, o NAVIT intensifica suas ações de conscientização e prevenção ao suicídio, trazendo para a comunidade informações, acolhimento e esperança.</p>
+        
+        <img src="banner-setembro-amarelo-2024.jpeg" alt="Banner da campanha Setembro Amarelo 2024 do NAVIT" class="image-banner" loading="lazy">
+        
+        <h3 style="margin-top:16px;color:var(--yellow-dark)">Ações do Setembro Amarelo</h3>
+        <ul style="margin-top:8px">
+          <li><strong>Rodas de conversa abertas</strong> sobre saúde mental e valorização da vida</li>
+          <li><strong>Distribuição de materiais informativos</strong> em locais estratégicos da cidade</li>
+          <li><strong>Parceria com escolas e instituições</strong> para palestras e atividades educativas</li>
+          <li><strong>Ações simbólicas</strong> como plantio de árvores, distribuição de girassóis e iluminação de prédios públicos</li>
+          <li><strong>Divulgação do CVV 188</strong> — linha de apoio emocional gratuita e disponível 24 horas</li>
+        </ul>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px">
+          <img src="girassois-rua-setembro.jpeg" alt="Girassóis nas ruas durante campanha Setembro Amarelo" class="image-banner" loading="lazy">
+          <img src="trabalhadores-secretaria-saude-setembro.jpeg" alt="Trabalhadores da Secretaria de Saúde participando da campanha" class="image-banner" loading="lazy">
+        </div>
+
+        <p style="margin-top:16px;font-weight:600;color:var(--yellow-dark)">
+          Se você ou alguém que você conhece está passando por um momento difícil, lembre-se: você não está sozinho(a). 
+          Buscar ajuda é um ato de coragem. CVV: 188 (24h, gratuito)
+        </p>
       </section>
 
     </main>
