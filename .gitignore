@@ -1,0 +1,17 @@
+# Lighthouse CI
+.lighthouseci/
+lhci_reports/
+
+# Node modules (if added in future)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
