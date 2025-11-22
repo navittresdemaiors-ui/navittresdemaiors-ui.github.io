@@ -22,9 +22,14 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.13.x
 
+      - name: Start static server
+        run: |
+          npx http-server . -p 8080 &
+          sleep 5
+
       - name: Run Lighthouse CI
         run: |
-          lhci autorun --collect.staticDistDir=. --collect.url=http://localhost/index.html || echo "Lighthouse CI completed with warnings"
+          lhci autorun --collect.url=http://localhost:8080/index.html || echo "Lighthouse CI completed with warnings"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
