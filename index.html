@@ -1,144 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NAVIT — Grupos de Apoio e Grupo de Enlutados</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NAVIT — Página com Espaço de Vozes, Grupos e Setembro Amarelo</title>
+  <meta name="description" content="NAVIT — Núcleo de Apoio à Vida de Três de Maio. Apoio emocional gratuito e voluntário, prevenção do suicídio e promoção da saúde mental.">
+  <meta property="og:title" content="NAVIT - Núcleo de Apoio à Vida de Três de Maio">
+  <meta property="og:description" content="Apoio emocional gratuito e voluntário. Grupos de apoio, rodas de conversa e campanhas como Setembro Amarelo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navittresdemaiors-ui.github.io/">
+  <meta property="og:image" content="/favicon.svg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#002b66">
+
   <style>
-    :root{--bg:#f7f8f9;--card:#ffffff;--accent:#2f855a;--muted:#6b7280;--glass:rgba(255,255,255,0.7)}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;background:linear-gradient(180deg,var(--bg),#ffffff);color:#111;margin:0;padding:32px}
-    .container{max-width:980px;margin:0 auto}
-    header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
-    .logo{width:68px;height:68px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px}
-    h1{margin:0;font-size:24px}
-    p.lead{color:var(--muted);margin:6px 0 24px}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-    .card h2{margin-top:0}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px}
-    ul{padding-left:18px;margin:8px 0}
-    .cta-row{display:flex;gap:12px;margin-top:16px}
-    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-ghost{background:transparent;border:1px solid #e6e6e6;color:var(--accent)}
-    .meta{font-size:14px;color:var(--muted);margin-top:10px}
-    .muted{color:var(--muted)}
-    .fullwidth{grid-column:1/-1}
-    @media (max-width:820px){.grid{grid-template-columns:1fr}.container{padding:16px}}
-    .card .feature{display:flex;gap:12px;align-items:flex-start;margin:10px 0}
-    .feature .dot{width:44px;height:44px;border-radius:8px;background:#f0fdf4;color:#14532d;display:flex;align-items:center;justify-content:center;font-weight:700}
-    footer{margin-top:26px;color:var(--muted);font-size:13px}
+    :root {
+      --brand: #002b66;   /* Azul institucional */
+      --accent: #4caf50;  /* Botões/ações */
+      --bg: #f5f9ff;
+      --card: #ffffff;
+      --muted: #374151;   /* Ajustado para melhor contraste */
+      --header-height: 72px;
+    }
+
+    * { box-sizing: border-box; }
+    html,body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #333; background: linear-gradient(180deg,#dce6f7 0%,#ffffff 60%); }
+
+    /* A11y: skip link */
+    .skip-link {
+      position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 1rem; top: 1rem; width: auto; height: auto; padding: .5rem 1rem; background: #fff; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.12);
+    }
+
+    /* Focus visibility */
+    :focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
+
+    /* Header */
+    header.site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
+    .brand-row { display:flex; align-items:center; gap:12px; }
+    .brand-row img { height: 56px; object-fit: contain; border-radius:6px; }
+    .brand-row strong { color: var(--brand); font-size:1.05rem; }
+
+    nav.site-nav { display:flex; gap:12px; align-items:center; }
+    nav.site-nav a { color: var(--brand); text-decoration: none; padding: .4rem .6rem; font-weight:600; border-radius:6px; }
+    nav.site-nav a:hover, nav.site-nav a:focus { background: rgba(0,43,102,0.06); outline: none; text-decoration: underline; }
+
+    /* CTA especial */
+    .cta-espaco {
+      padding: 6px 12px;
+      border-radius: 6px;
+      background-color: var(--accent);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 980px;
+      margin: calc(var(--header-height) + 1.5rem) auto 3rem auto;
+      padding: 1rem;
+    }
+
+    section { margin-bottom: 2.5rem; }
+    h1,h2,h3 { color: var(--brand); text-align: center; margin: 0 0 .75rem 0; }
+    p.lead { color: var(--muted); text-align:center; margin: 0 0 1rem 0; max-width:800px; margin-left:auto; margin-right:auto; }
+
+    .button, .button:visited {
+      display:inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: .7rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight:700;
+      box-shadow: 0 6px 18px rgba(72,163,75,.12);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-top: 1rem;
+    }
+
+    /* Espaço de Vozes (mantido se presente) */
+    .espaco-vozes { background: #e8f1ff; border-left: 6px solid var(--brand); padding: 2rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .espaco-vozes .card { border: 1px solid #d0d9ee; }
+
+    /* Novas seções: Grupos & Setembro Amarelo */
+    .grupos { padding: 24px; max-width: 900px; margin: 0 auto; }
+    .grupos .lead-strong { font-weight: 700; font-size: 1.05rem; color: var(--muted); text-align:center; margin-bottom: 1rem; }
+    .grupos ul { max-width: 760px; margin: 0 auto 1rem auto; color: var(--muted); line-height:1.6; }
+    .grupos .sub-card { background: var(--card); padding: 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); margin: 12px 0; }
+
+    .setembro { padding: 24px; max-width: 900px; margin: 0 auto; background: linear-gradient(180deg, #fffaf0, #ffffff); border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    .setembro p, .setembro ul { color: var(--muted); line-height: 1.6; max-width: 780px; margin: 0 auto; }
+
+    .action-link { display:inline-block; margin-top:10px; padding:10px 18px; background-color:var(--brand); color:#fff; border-radius:6px; text-decoration:none; font-weight:700; }
+
+    @media (max-width: 820px) {
+      nav.site-nav { gap:8px; font-size: .95rem; }
+      .grupos, .setembro { padding: 18px; }
+    }
+    @media (max-width: 480px) {
+      .brand-row img { height: 48px; }
+      header.site-header { padding: 0 .6rem; }
+    }
+
+    a:focus, button:focus { outline: 3px solid #ffbf47; outline-offset: 2px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">NAV</div>
-      <div>
-        <h1>NAVIT — Grupos de Apoio e Rodas de Conversa</h1>
-        <p class="lead">Espaços gratuitos, acolhedores e conduzidos por voluntários preparados para escuta e suporte emocional.</p>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner" aria-label="Cabeçalho principal">
+    <div class="brand-row">
+      <a href="/" aria-label="Página inicial NAVIT">
+        <img src="/path/to/logo-navit.png" alt="Logo NAVIT">
+      </a>
+      <strong>NAVIT</strong>
+    </div>
+
+    <nav class="site-nav" role="navigation" aria-label="Menu principal">
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#voluntario">Voluntariado</a>
+      <a href="#contato">Contato</a>
+      <a href="#espaco-vozes" class="cta-espaco" role="link" aria-label="Ir para Espaço de Vozes">ESPAÇO DE VOZES</a>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    <section id="inicio" style="text-align:center;">
+      <h1>NAVIT - Núcleo de Apoio à Vida de Três de Maio</h1>
+      <p class="lead">Apoio emocional gratuito e voluntário, promovendo a saúde mental, a prevenção do suicídio e a valorização da vida.</p>
+      <p><a class="button" href="https://wa.me/55999093258" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp">Falar no WhatsApp</a></p>
+    </section>
+
+    <section id="quem-somos">
+      <h2>Quem Somos</h2>
+      <p>O NAVIT foi fundado em <strong>18 de Novembro de 2016</strong> por um grupo de voluntários de Três de Maio, sensibilizados e impactados com o alto número de suicídios na cidade.</p>
+      <p>Somos uma organização sem fins lucrativos voltada à prevenção do suicídio, ao apoio emocional e à promoção da saúde mental. Atuamos com grupos de ajuda, rodas de conversa, palestras, visitas e ações comunitárias.</p>
+    </section>
+
+    <section id="sobre">
+      <h2>Visão, Missão e Valores</h2>
+
+      <h3>Visão</h3>
+      <p>Sonhamos com uma comunidade onde cada pessoa seja vista, escutada e cuidada. Uma comunidade em que a vida seja valorizada todos os dias e em que ninguém precise enfrentar a dor sozinho.</p>
+
+      <h3>Missão</h3>
+      <p>Existimos para acolher, apoiar e oferecer presença. Para dizer que a vida importa. Para caminhar ao lado de quem passa por momentos difíceis, oferecendo apoio emocional, empatia e conexão humana.</p>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos & Atividades</h2>
+      <div class="card">
+        <p>Rodas de conversa, grupos de apoio ao enlutado, palestras em escolas e campanhas como Setembro Amarelo. Entre em contato para parcerias e propostas.</p>
       </div>
-    </header>
+    </section>
 
-    <main class="grid">
-      <!-- Grupo de Enlutados -->
-      <article class="card">
-        <span class="pill">Encontros Mensais ● Gratuito</span>
-        <h2>🌷 Grupo de Apoio para Enlutados</h2>
-        <p class="muted">Um espaço sensível e seguro para quem enfrenta a dor da perda — recente ou antiga. Aqui, seu tempo e sentimento são respeitados.</p>
+    <!-- === ADIÇÃO: Seção Grupos de Apoio & Rodas de Conversa (inserida abaixo de 'Projetos & Atividades') === -->
+    <section id="grupos-apoiarodas" class="grupos" role="region" aria-labelledby="grupos-apoiarodas-title">
+      <h2 id="grupos-apoiarodas-title">Grupos de Apoio e Rodas de Conversa NAVIT</h2>
 
-        <div class="feature">
-          <div class="dot">1</div>
-          <div>
-            <strong>O que oferecemos</strong>
-            <ul>
-              <li>Escuta qualificada e sigilosa — você não precisa falar se não quiser</li>
-              <li>Partilha de histórias e vivências em um ambiente respeitoso</li>
-              <li>Recursos e orientações para fortalecer o cuidado diário</li>
-            </ul>
-          </div>
+      <p class="lead-strong"><strong>Cuidar de si também é um ato de coragem</strong></p>
+
+      <div class="sub-card" role="article" aria-labelledby="o-que-encontrar-title">
+        <h3 id="o-que-encontrar-title" style="text-align:left;color:var(--brand);margin-top:0;">O que você pode encontrar nesses espaços</h3>
+        <ul aria-describedby="o-que-encontrar-title">
+          <li>Conversas leves e profundas, onde cada pessoa fala se quiser — e escuta sempre que precisar</li>
+          <li>Acolhimento sem julgamentos, com atenção ao tempo e ao jeito de cada um</li>
+          <li>Troca de experiências reais que fortalecem e aproximam</li>
+          <li>Dinâmicas que ajudam a organizar sentimentos, aliviar tensões e promover autoestima</li>
+          <li>Um ambiente humano e seguro, onde sua presença já é valiosa</li>
+        </ul>
+      </div>
+
+      <div class="sub-card" role="article" aria-labelledby="para-quem-title">
+        <h3 id="para-quem-title" style="text-align:left;color:var(--brand);margin-top:0;">Para quem são?</h3>
+        <p>Para qualquer pessoa que deseje um momento de cuidado, que esteja enfrentando questões emocionais, vivendo luto, sobrecarga, ansiedade, ou que apenas queira uma rede de apoio mais afetuosa.</p>
+      </div>
+
+      <div class="sub-card" role="article" aria-labelledby="como-funciona-title">
+        <h3 id="como-funciona-title" style="text-align:left;color:var(--brand);margin-top:0;">Como funcionam?</h3>
+        <ul>
+          <li><strong>Encontros mensais ou quinzenais</strong>, dependendo do grupo</li>
+          <li><strong>Atividades gratuitas</strong> e abertas à comunidade</li>
+          <li><strong>Formato acolhedor</strong>, com duração de 60 a 90 minutos</li>
+          <li>Temas variados: saúde mental, sentimentos, perdas, autocuidado, relações, resiliência e muito mais</li>
+        </ul>
+      </div>
+
+      <div class="sub-card" role="article" aria-labelledby="por-que-participar-title">
+        <h3 id="por-que-participar-title" style="text-align:left;color:var(--brand);margin-top:0;">Por que participar?</h3>
+        <p>Porque conversar transforma. Porque ser ouvido(a) com respeito faz diferença. Porque, quando a dor é dividida, o caminho fica mais leve.</p>
+        <p><strong>Nos espaços do NAVIT, você não é apenas participante: você é parte de uma rede que cuida, acolhe e se fortalece junto.</strong></p>
+        <p style="text-align:center;"><a class="action-link" href="https://wa.me/55999093258" target="_blank" rel="noopener noreferrer" aria-label="Solicitar informações sobre grupos via WhatsApp">Quero participar / Solicitar informações</a></p>
+      </div>
+    </section>
+
+    <!-- === ADIÇÃO: Seção Setembro Amarelo === -->
+    <section id="setembro-amarelo" class="setembro" role="region" aria-labelledby="setembro-amarelo-title">
+      <h2 id="setembro-amarelo-title">Setembro Amarelo — Mês de Conscientização pela Vida</h2>
+
+      <p>
+        O Setembro Amarelo é um período dedicado a ampliar a conversa sobre saúde mental e prevenção do suicídio,
+        reforçando a importância de olhar para si, para o outro e para as redes de apoio que nos fortalecem. É um convite
+        para quebrar o silêncio, acolher histórias, estender a mão e lembrar que pedir ajuda é um gesto de coragem — nunca de fraqueza.
+      </p>
+
+      <p><strong>Durante este mês, o NAVIT intensifica suas ações:</strong></p>
+      <ul>
+        <li>Realiza eventos abertos e gratuitos</li>
+        <li>Promove rodas de conversa e ações de sensibilização</li>
+        <li>Reforça os canais de acolhimento emocional</li>
+        <li>Incentiva escolas, famílias e comunidade a participarem ativamente da prevenção</li>
+        <li>Constrói espaços de diálogo que permanecem durante todo o ano</li>
+      </ul>
+
+      <p>
+        <em>Setembro Amarelo não é apenas uma campanha — é um movimento de cuidado, presença e solidariedade. No NAVIT,
+        essa missão acontece todos os dias, com amor, responsabilidade e compromisso com a vida.</em>
+      </p>
+
+      <p style="text-align:center;margin-top:12px;">
+        <a class="action-link" href="#contato" aria-label="Saiba mais sobre ações de prevenção">Saiba mais / Participar das ações</a>
+      </p>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <div class="card">
+        <div class="gallery" aria-hidden="false">
+          <figure class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Foto+1" alt="Voluntários em ação" loading="lazy" width="600" height="400"></figure>
+          <figure class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Foto+2" alt="Roda de conversa" loading="lazy" width="600" height="400"></figure>
+          <figure class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Foto+3" alt="Palestra na comunidade" loading="lazy" width="600" height="400"></figure>
         </div>
+      </div>
+    </section>
 
-        <div class="feature">
-          <div class="dot">2</div>
-          <div>
-            <strong>Quem pode participar</strong>
-            <p class="muted">Familiares, amigos ou qualquer pessoa que esteja enlutada — sem restrição de tempo desde a perda.</p>
-          </div>
-        </div>
+    <!-- Voluntariado -->
+    <section id="voluntariado">
+      <h2>Voluntariado</h2>
+      <div class="card">
+        <p>Se você deseja colaborar como voluntário(a), temos um processo de orientação e formação. Preencha o formulário de interesse (ou fale conosco pelo WhatsApp).</p>
+        <p style="text-align:center"><a class="button" href="#contato">Quero ser voluntário(a)</a></p>
+      </div>
+    </section>
 
-        <p class="meta">Formato: encontro presencial • Duração aproximada: 60-90 minutos • Vagas por encontro: limitadas</p>
+    <!-- Contato (ATUALIZADO COM OS DADOS FORNECIDOS) -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="card">
+        <p>Telefone / WhatsApp: <a href="https://wa.me/55999093258" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa WhatsApp com NAVIT">(+55) 99 9093-258</a></p>
+        <p>Email: <a href="mailto:navittresdemaiors@gmail.com" aria-label="Enviar email para NAVIT">navittresdemaiors@gmail.com</a></p>
+        <p>Endereço: Rua Santa Helena, 530 / Oriental, Três de Maio, RS</p>
+        <p>
+          Facebook: <a href="https://www.facebook.com/navittm" target="_blank" rel="noopener noreferrer" aria-label="Página do NAVIT no Facebook">facebook.com/navittm</a><br>
+          YouTube: <a href="https://www.youtube.com/@vamosconversarnavit" target="_blank" rel="noopener noreferrer" aria-label="Canal NAVIT no YouTube">youtube.com/@vamosconversarnavit</a>
+        </p>
+      </div>
+    </section>
 
-        <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-enlutados'">Inscrever-se / Solicitar informações</button>
-          <button class="btn btn-ghost" onclick="location.href='#contato'">Contato NAVIT</button>
-        </div>
-      </article>
+  </main>
 
-      <!-- Grupos de Apoio e Rodas de Conversa -->
-      <article class="card">
-        <span class="pill">Mensais / Quinzenais • Gratuito</span>
-        <h2>🫂 Grupos de Apoio e Rodas de Conversa</h2>
-        <p class="muted">Conversas que acolhem, fortalecem e geram ligação — pensadas para transformar o cuidado emocional em algo presente na comunidade.</p>
-
-        <div class="feature">
-          <div class="dot">A</div>
-          <div>
-            <strong>O que acontece</strong>
-            <ul>
-              <li>Rodas temáticas (luto, ansiedade, autocuidado, relações)</li>
-              <li>Dinâmicas práticas que ajudam a organizar sentimentos</li>
-              <li>Espaço para quem quer ouvir e para quem quer partilhar</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="feature">
-          <div class="dot">B</div>
-          <div>
-            <strong>Por que participar?</strong>
-            <p class="muted">Porque conversar transforma — partilhar reduz o peso, a escuta qualificada abre caminhos e a conexão humana reconstrói forças.</p>
-          </div>
-        </div>
-
-        <p class="meta">Formato: encontros de 60 a 90 minutos • Temas variados • Gratuito e aberto à comunidade</p>
-
-        <div class="cta-row">
-          <button class="btn btn-primary" onclick="location.href='#inscricao-grupos'">Ver calendário / Inscrever-se</button>
-          <button class="btn btn-ghost" onclick="location.href='#voluntariado'">Quero ser voluntário(a)</button>
-        </div>
-      </article>
-
-      <!-- Full width section with practical info -->
-      <section class="card fullwidth" aria-labelledby="info">
-        <h2 id="info">Como participar</h2>
-        <p class="muted">As datas e horários são divulgados nas redes sociais do NAVIT e na nossa página de eventos. Para receber informações por mensagem, inscreva-se através do formulário abaixo ou entre em contato com a equipe.</p>
-
-        <div style="margin-top:12px">
-          <form id="inscricao-enlutados" onsubmit="alert('Formulário de exemplo — substitua pelo link real do Google Forms ou sistema de inscrição');return false;">
-            <label style="display:block;margin-bottom:8px">Nome (opcional):<br>
-              <input type="text" name="nome" style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
-            </label>
-
-            <label style="display:block;margin-top:8px;margin-bottom:8px">Email ou telefone para contato:<br>
-              <input type="email" name="email" required style="padding:8px;border-radius:8px;border:1px solid #e5e7eb;width:100%;max-width:420px">
-            </label>
-
-            <div style="margin-top:10px">
-              <button class="btn btn-primary" type="submit">Enviar inscrição</button>
-              <button class="btn btn-ghost" type="button" onclick="location.href='#contato'">Falar com a equipe</button>
-            </div>
-          </form>
-        </div>
-
-        <p class="muted" style="margin-top:14px">Observação: todos os encontros são gratuitos, voluntários passam por orientação para condução e o espaço preserva sigilo e respeito a cada participante.</p>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>Para adaptar o texto, as imagens ou integrar o formulário real, substitua o formulário de exemplo pelo link do Google Forms ou sistema de inscrições que utilizar.</p>
-    </footer>
-  </div>
+  <footer style="text-align:center;padding:1rem;background:transparent;color:var(--muted);">
+    © <strong>NAVIT</strong> — Apoio emocional gratuito e voluntário. Se precisar de ajuda imediata, procure serviços de saúde locais.
+  </footer>
 </body>
 </html>
