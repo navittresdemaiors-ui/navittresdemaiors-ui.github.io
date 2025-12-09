@@ -1,0 +1,11 @@
+Salve a imagem do logo que você enviou neste caminho: assets/logo.png
+
+Instruções:
+1. Faça download da imagem enviada na conversa.
+2. Crie a pasta 'assets' na raiz do projeto (se ainda não existir).
+3. Salve a imagem como 'assets/logo.png' (substituir qualquer arquivo existente).
+4. Abra index.html no navegador para confirmar o logo no cabeçalho.
+5. Se quiser que eu faça o commit no repositório e publique no GitHub Pages, me informe o nome do repositório e a branch.
+
+
+Note: The actual image file assets/logo.png should be uploaded separately (use the image you provided in the chat). If you want me to include the binary image in the commit, please confirm and I'll attach it as base64 in a follow-up.
