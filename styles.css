@@ -92,3 +92,66 @@ body{margin:0;color:var(--accent);background:var(--bg);-webkit-font-smoothing:an
   .logo img{height:48px}
   .brand-title{font-size:.95rem}
 }
+/* ===== NAVIT-like serif for brand and hero ===== */
+/* Importa fonte serif parecida com a do logo (Playfair Display) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Aplica a fonte do logo ao texto do brand (ao lado do logo) */
+.brand-title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #083855;
+  letter-spacing: 0.4px;
+}
+
+/* Aplica a mesma fonte ao hero principal (NÚCLEO DE APOIO À VIDA) */
+.hero .container h1,
+.hero h1 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: #083855;
+  font-size: 2.25rem;
+  margin: 0;
+  line-height: 1.05;
+}
+
+/* Mantém links do menu em azul e com a fonte do logo */
+.main-nav a {
+  color: #0b63a6;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color .18s ease, transform .12s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #084d7a;
+  transform: translateY(-1px);
+}
+
+/* Cartões Visão/Missão/Valores com fundo pastel */
+.grid-3 .card {
+  background: #f6efea;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(13,40,60,0.06);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.grid-3 .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(13,40,60,0.08);
+}
+
+.grid-3 .card h3 {
+  color: #0b3f66;
+  margin-top: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-nav a { font-size: 15px; }
+  .grid-3 .card { padding: 16px; margin-bottom: 12px; }
+  .hero .container h1 { font-size: 1.8rem; }
+}
