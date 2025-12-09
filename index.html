@@ -1,26 +1,161 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NAVIT - Núcleo de Apoio à Vida de Três de Maio</title>
-  <link rel="icon" href="assets/logo.svg">
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; color: #1f4a94; text-align: center; background: #fff; }
-    header { padding: 40px 20px; }
-    main { padding: 20px; }
-    h1 { margin: 0.5rem 0; font-size: 2rem; }
-    p { margin: 0.25rem 0; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NAVIT_ NÚCLEO DE APOIO À VIDA — Vamos Conversar</title>
+  <meta name="description" content="NAVIT — Núcleo de Apoio à Vida: grupos de apoio emocional, rodas de conversa, campanhas e podcast. Espaço de acolhimento gratuito."/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <!-- Updated logo to use assets/logo.svg -->
-    <img src="assets/logo.svg" alt="NAVIT - Logo" width="600" style="max-width:90%; height:auto;" />
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="NAVIT_ NÚCLEO DE APOIO À VIDA — Vamos Conversar">
+        <img src="assets/logo.svg" alt="NAVIT — Núcleo de Apoio à Vida" />
+        <div class="brand-text">
+          <span class="brand-title">NAVIT_</span>
+          <span class="brand-subtitle">NÚCLEO DE APOIO À VIDA</span>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#sobre">Quem somos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#voluntario">Seja voluntário</a>
+        <a href="#contato" class="primary">Contato</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </div>
   </header>
+
   <main>
-    <h1>NAVIT</h1>
-    <p>Núcleo de Apoio à Vida de Três de Maio</p>
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Vamos conversar. Ninguém precisa enfrentar sozinho.</h1>
+        <p class="lead">NAVIT oferece espaços de acolhimento emocional gratuitos: grupos de apoio, rodas de conversa, palestras e campanhas de prevenção. Junte-se a nós.</p>
+        <a href="#projetos" class="btn">Nossos projetos</a>
+        <a href="#voluntario" class="btn outline">Quero ajudar</a>
+      </div>
+    </section>
+
+    <section class="container sobre" id="sobre">
+      <h2>Quem somos</h2>
+      <p>NAVIT — Núcleo de Apoio à Vida é um coletivo dedicado ao acolhimento emocional e à promoção da saúde mental. Criamos espaços seguros e gratuitos para diálogo, escuta e apoio entre pessoas de diferentes idades e trajetórias.</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Visão</h3>
+          <p>Ser referência em acolhimento comunitário, acessível e inclusivo, promovendo bem‑estar emocional para todos.</p>
+        </div>
+        <div class="card">
+          <h3>Missão</h3>
+          <p>Oferecer espaços de escuta e cuidado, fortalecer redes de apoio e reduzir o isolamento por meio de ações, eventos e educação emocional.</p>
+        </div>
+        <div class="card">
+          <h3>Valores</h3>
+          <ul>
+            <li>Acolhimento e respeito</li>
+            <li>Confidencialidade</li>
+            <li>Inclusão e diversidade</li>
+            <li>Gratuidade e acesso</li>
+            <li>Empatia e escuta ativa</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container projetos" id="projetos">
+      <h2>Nossos projetos</h2>
+
+      <article class="project">
+        <h3>Grupos de apoio emocional (gratuitos)</h3>
+        <p>Grupos conduzidos por facilitadores treinados para oferecer escuta, trocas e ferramentas práticas para enfrentar desafios emocionais. Espaço seguro e confidencial.</p>
+        <h4>Como funcionam</h4>
+        <p>Encontros semanais/quinzenais, com limite de vagas por grupo. A dinâmica combina escuta em roda, atividades e partilha de estratégias de enfrentamento.</p>
+        <h4>Pra quem são</h4>
+        <p>Abertos a quem busca acolhimento: jovens, adultos, familiares e qualquer pessoa que queira apoio emocional.</p>
+        <h4>Por que participar</h4>
+        <p>Para encontrar suporte, diminuir isolamento, aprender ferramentas emocionais e criar uma rede de apoio.</p>
+      </article>
+
+      <article class="project">
+        <h3>Campanhas — Setembro Amarelo</h3>
+        <p>Ações de prevenção, rodas de conversa e divulgação de recursos de ajuda durante o mês. Atividades presenciais e online com foco em cuidado e conscientização.</p>
+      </article>
+
+      <article class="project">
+        <h3>Rodas de conversa e palestras</h3>
+        <p>Encontros temáticos com especialistas ou facilitadores experientes sobre ansiedade, luto, estresse, relações e autocuidado.</p>
+      </article>
+    </section>
+
+    <section class="container espaco" id="espaco">
+      <h2>O que você encontra nos nossos espaços</h2>
+      <ul>
+        <li>Escuta ativa e sem julgamentos</li>
+        <li>Atividades práticas de regulação emocional</li>
+        <li>Informação e encaminhamentos quando necessário</li>
+        <li>Ambiente inclusivo e confidencial</li>
+      </ul>
+    </section>
+
+    <section class="container voluntario" id="voluntario">
+      <h2>Seja voluntário</h2>
+      <p>Estamos sempre em busca de pessoas comprometidas para atuar como facilitadores, apoio logístico, divulgação e produção de conteúdos. Oferecemos treinamento e supervisão.</p>
+      <p>Interessado(a)? Envie um e-mail para <a href="mailto:navittresdemaiors@gmail.com">navittresdemaiors@gmail.com</a> ou preencha nosso formulário de voluntariado (podemos criar um formulário se preferir).</p>
+    </section>
+
+    <section class="container podcast" id="podcast">
+      <h2>Podcast — Canal "Vamos Conversar" do NAVIT</h2>
+      <p>Apresentamos histórias, conversas e reflexões sobre saúde mental. Você pode enviar suas histórias pelos formulários abaixo:</p>
+      <ul class="links-list">
+        <li><a href="https://forms.gle/PagLSwqoBRD7WN5P7" target="_blank" rel="noopener">Enviar história — formulário 1</a></li>
+        <li><a href="https://forms.gle/7WKHpd7u7ewon5bx5" target="_blank" rel="noopener">Enviar história — formulário 2</a></li>
+        <li><a href="https://forms.gle/RNfnmuviS8UW9tLNA" target="_blank" rel="noopener">Enviar história — formulário 3</a></li>
+      </ul>
+      <p>Nosso canal no YouTube: <a href="https://www.youtube.com/@vamosconversarnavit" target="_blank" rel="noopener">Vamos Conversar — NAVIT</a></p>
+    </section>
+
+    <section class="container galeria" id="galeria">
+      <h2>Galeria de fotos</h2>
+      <p>Confira momentos dos nossos encontros e campanhas.</p>
+      <div class="gallery-grid" aria-live="polite">
+        <!-- Substitua as imagens pelas suas -->
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=60" alt="Encontro em círculo" loading="lazy" tabindex="0" />
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=60" alt="Palestra comunitária" loading="lazy" tabindex="0" />
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=60" alt="Roda de conversa" loading="lazy" tabindex="0" />
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=60" alt="Voluntariado" loading="lazy" tabindex="0" />
+      </div>
+
+      <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Visualizador de imagem">
+        <button id="modal-close" class="modal-close" aria-label="Fechar">×</button>
+        <img id="modal-img" src="" alt="" />
+      </div>
+    </section>
+
+    <section class="container contato" id="contato">
+      <h2>Contato</h2>
+      <p>Para informações, parcerias ou dúvidas, escreva para: <a href="mailto:navittresdemaiors@gmail.com">navittresdemaiors@gmail.com</a>.</p>
+      <p>Siga nosso canal no YouTube: <a href="https://www.youtube.com/@vamosconversarnavit" target="_blank" rel="noopener">Vamos Conversar — NAVIT</a></p>
+      <p>Fale conosco também pelo WhatsApp: <a href="https://wa.me/55999093258?text=Ol%C3%A1%20NAvit%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener">+55 99 9093‑258</a></p>
+    </section>
   </main>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a class="whatsapp-fab" href="https://wa.me/55999093258?text=Ol%C3%A1%20NAvit%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener" aria-label="Fale conosco">Fale conosco</a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> NAVIT — NÚCLEO DE APOIO À VIDA. Todos os direitos reservados.</small>
+      <nav class="footer-nav" aria-label="Navegação de rodapé">
+        <a href="#sobre">Quem somos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
