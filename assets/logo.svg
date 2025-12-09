@@ -1,0 +1,20 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 360' width='1200' height='360'>
+  <defs>
+    <style type='text/css'><![CDATA[
+      .navit { fill:#1f4a94; font-family: 'Georgia', serif; font-weight:700; font-size:180px; }
+      .subtitle { fill:#1f4a94; font-family: Arial, Helvetica, sans-serif; font-size:28px; }
+      .bird { fill:#000000; }
+    ]]></style>
+  </defs>
+  <!-- Birds silhouettes (stylized paths) -->
+  <g transform='translate(60,10) scale(1.0)'>
+    <path class='bird' d='M120 40c30-18 60-18 90 0 0 0-22-6-45 6-23 12-36 18-45 12-9-6-3-18 0-18z' />
+    <path class='bird' d='M360 10c40-28 80-28 120 0-22-12-52 0-78 12-26 12-46 10-42 2 4-8 4-12 0-14z' transform='translate(60,10) scale(0.9)' />
+    <path class='bird' d='M540 30c28-20 56-20 84 0-20-8-44 2-66 12-22 10-36 8-30-12z' transform='translate(140,-10) scale(0.95)' />
+    <path class='bird' d='M800 5c38-30 76-30 114 0-28-10-58 4-86 18-28 14-40 12-28-18z' transform='translate(240,0) scale(1.05)' />
+  </g>
+  <!-- NAVIT text -->
+  <text x='40' y='240' class='navit'>NAVIT</text>
+  <!-- Subtitle -->
+  <text x='40' y='292' class='subtitle'>NÚCLEO DE APOIO À VIDA DE TRÊS DE MAIO</text>
+</svg>
