@@ -51,47 +51,7 @@ body{margin:0;color:var(--accent);background:var(--bg);-webkit-font-smoothing:an
 .gallery-grid img{width:100%;height:150px;object-fit:cover;border-radius:6px;cursor:pointer;display:block}
 
 .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);padding:2rem;visibility:hidden;opacity:0;transition:opacity .18s ease}
-.modal[aria-hidden="false"]{visibility:visible;opacity:1}
-.modal img{max-width:90%;max-height:80%;border-radius:8px}
-.modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:none;color:#fff;font-size:2rem;cursor:pointer}
 
-.site-footer{border-top:1px solid #f0f0f0;padding:1rem 0;margin-top:2rem}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.footer-nav a{margin-left:.5rem;text-decoration:none;color:var(--muted)}
-
-/* Botão flutuante WhatsApp */
-.whatsapp-fab{
-  position:fixed;
-  right:1rem;
-  bottom:1rem;
-  width:56px;
-  height:56px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 6px 18px rgba(0,0,0,0.18);
-  text-decoration:none;
-  z-index:999;
-}
-.whatsapp-fab svg{width:26px;height:26px}
-.whatsapp-fab:focus{outline:3px solid rgba(37,211,102,0.25)}
-
-/* Responsividade */
-@media (max-width:900px){
-  .grid-3{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  .main-nav{display:none}
-  .menu-toggle{display:inline-block}
-  .brand-text{display:none} /* esconde o texto mais longo em telas pequenas para poupar espaço */
-}
-
-/* Em telas muito pequenas, mostrar versão reduzida do título */
-@media (max-width:480px){
-  .logo img{height:48px}
-  .brand-title{font-size:.95rem}
-}
 /* ===== NAVIT-like serif for brand and hero ===== */
 /* Importa fonte serif parecida com a do logo (Playfair Display) */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
@@ -110,12 +70,12 @@ body{margin:0;color:var(--accent);background:var(--bg);-webkit-font-smoothing:an
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-weight: 700;
   color: #083855;
-  font-size: 2.25rem;
+  font-size: 2.25rem; /* ajustável se quiser maior/menor */
   margin: 0;
   line-height: 1.05;
 }
 
-/* Mantém links do menu em azul e com a fonte do logo */
+/* Mantém links do menu em azul (conforme pedido anteriormente) */
 .main-nav a {
   color: #0b63a6;
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -130,64 +90,29 @@ body{margin:0;color:var(--accent);background:var(--bg);-webkit-font-smoothing:an
   transform: translateY(-1px);
 }
 
-/* Cartões Visão/Missão/Valores com fundo pastel */
+/* Cartões Visão/Missão/Valores com fundo amarelo suave */
 .grid-3 .card {
-  background: #f6efea;
+  background: #fff8dd;             /* pastel amarelo suave */
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 6px 18px rgba(13,40,60,0.06);
+  box-shadow: 0 6px 18px rgba(27,24,10,0.06);
   transition: transform .16s ease, box-shadow .16s ease;
 }
 
 .grid-3 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(13,40,60,0.08);
+  box-shadow: 0 18px 36px rgba(27,24,10,0.09);
 }
 
 .grid-3 .card h3 {
-  color: #0b3f66;
+  color: #6b4f00;                /* título em tom quente para contraste */
   margin-top: 0;
 }
 
-/* Responsividade */
+/* Pequenos ajustes responsivos */
 @media (max-width: 768px) {
   .main-nav a { font-size: 15px; }
+  .grid-3 { grid-template-columns: 1fr; }
   .grid-3 .card { padding: 16px; margin-bottom: 12px; }
   .hero .container h1 { font-size: 1.8rem; }
-}
-/* Cartões Visão/Missão/Valores com fundo amarelo suave */
-.grid-3 .card {
-  background: #fff8dd;             /* pastel amarelo suave */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(27,24,10,0.06);
-  transition: transform .16s ease, box-shadow .16s ease;
-}
-
-.grid-3 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(27,24,10,0.09);
-}
-
-.grid-3 .card h3 {
-  color: #6b4f00;                /* título em tom quente para contraste */
-  margin-top: 0;
-}
-/* Cartões Visão/Missão/Valores com fundo amarelo suave */
-.grid-3 .card {
-  background: #fff8dd;             /* pastel amarelo suave */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(27,24,10,0.06);
-  transition: transform .16s ease, box-shadow .16s ease;
-}
-
-.grid-3 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(27,24,10,0.09);
-}
-
-.grid-3 .card h3 {
-  color: #6b4f00;                /* título em tom quente para contraste */
-  margin-top: 0;
 }
